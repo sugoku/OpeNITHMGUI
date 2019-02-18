@@ -1,2 +1,2 @@
-# openithmgui
-GUI to control firmware for OpeNITHM
+# OpeNITHMGUI
+A simple GUI to control the firmware for OpeNITHM
