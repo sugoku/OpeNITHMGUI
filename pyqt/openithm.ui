@@ -7,25 +7,25 @@
     <x>0</x>
     <y>0</y>
     <width>320</width>
-    <height>480</height>
+    <height>370</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>OpeNITHM</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="title">
     <property name="geometry">
      <rect>
       <x>9</x>
       <y>10</y>
-      <width>151</width>
+      <width>161</width>
       <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>16</pointsize>
+      <pointsize>13</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -40,10 +40,10 @@
       <x>10</x>
       <y>40</y>
       <width>301</width>
-      <height>161</height>
+      <height>141</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="touchboardLayout">
      <property name="spacing">
       <number>0</number>
      </property>
@@ -51,9 +51,10 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="tlabel">
        <property name="font">
         <font>
+         <pointsize>10</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -64,7 +65,10 @@
       </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="tthreshold">
+       <property name="spacing">
+        <number>10</number>
+       </property>
        <property name="leftMargin">
         <number>10</number>
        </property>
@@ -72,7 +76,7 @@
         <number>10</number>
        </property>
        <item>
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="thres_label">
          <property name="maximumSize">
           <size>
            <width>80</width>
@@ -85,10 +89,10 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox_3"/>
+        <widget class="QSpinBox" name="thres_val"/>
        </item>
        <item>
-        <widget class="QLabel" name="label_8">
+        <widget class="QLabel" name="thres_current">
          <property name="text">
           <string>Current: 0</string>
          </property>
@@ -97,7 +101,10 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QHBoxLayout" name="tdead_zone">
+       <property name="spacing">
+        <number>10</number>
+       </property>
        <property name="leftMargin">
         <number>10</number>
        </property>
@@ -105,7 +112,7 @@
         <number>10</number>
        </property>
        <item>
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="dead_label">
          <property name="maximumSize">
           <size>
            <width>80</width>
@@ -118,10 +125,10 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox_2"/>
+        <widget class="QSpinBox" name="dead_val"/>
        </item>
        <item>
-        <widget class="QLabel" name="label_11">
+        <widget class="QLabel" name="dead_current">
          <property name="text">
           <string>Current: 0</string>
          </property>
@@ -130,7 +137,10 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
+      <layout class="QHBoxLayout" name="talpha">
+       <property name="spacing">
+        <number>10</number>
+       </property>
        <property name="leftMargin">
         <number>10</number>
        </property>
@@ -138,7 +148,7 @@
         <number>10</number>
        </property>
        <item>
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="alpha_label">
          <property name="maximumSize">
           <size>
            <width>80</width>
@@ -151,10 +161,10 @@
         </widget>
        </item>
        <item>
-        <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+        <widget class="QDoubleSpinBox" name="alpha_val"/>
        </item>
        <item>
-        <widget class="QLabel" name="label_12">
+        <widget class="QLabel" name="alpha_current">
          <property name="text">
           <string>Current: 0.00</string>
          </property>
@@ -163,16 +173,22 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <layout class="QHBoxLayout" name="tbuttons">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="tapply">
          <property name="text">
           <string>Apply</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="tcalibrate">
          <property name="text">
           <string>Calibrate Keys</string>
          </property>
@@ -182,7 +198,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="status">
     <property name="geometry">
      <rect>
       <x>169</x>
@@ -202,12 +218,12 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>210</y>
+      <y>190</y>
       <width>301</width>
-      <height>131</height>
+      <height>111</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QVBoxLayout" name="irLayout">
      <property name="spacing">
       <number>0</number>
      </property>
@@ -215,9 +231,10 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="QLabel" name="label_7">
+      <widget class="QLabel" name="irlabel">
        <property name="font">
         <font>
+         <pointsize>10</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -228,7 +245,10 @@
       </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <layout class="QHBoxLayout" name="irdead_zone">
+       <property name="spacing">
+        <number>10</number>
+       </property>
        <property name="leftMargin">
         <number>10</number>
        </property>
@@ -236,7 +256,7 @@
         <number>10</number>
        </property>
        <item>
-        <widget class="QLabel" name="label_9">
+        <widget class="QLabel" name="irdead_label">
          <property name="maximumSize">
           <size>
            <width>80</width>
@@ -249,10 +269,10 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox_5"/>
+        <widget class="QSpinBox" name="irdead_val"/>
        </item>
        <item>
-        <widget class="QLabel" name="label_13">
+        <widget class="QLabel" name="irdead_current">
          <property name="text">
           <string>Current: 0</string>
          </property>
@@ -261,7 +281,10 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <layout class="QHBoxLayout" name="iralpha">
+       <property name="spacing">
+        <number>10</number>
+       </property>
        <property name="leftMargin">
         <number>10</number>
        </property>
@@ -269,7 +292,7 @@
         <number>10</number>
        </property>
        <item>
-        <widget class="QLabel" name="label_10">
+        <widget class="QLabel" name="iralpha_label">
          <property name="maximumSize">
           <size>
            <width>80</width>
@@ -282,10 +305,10 @@
         </widget>
        </item>
        <item>
-        <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+        <widget class="QDoubleSpinBox" name="iralpha_val"/>
        </item>
        <item>
-        <widget class="QLabel" name="label_14">
+        <widget class="QLabel" name="iralpha_current">
          <property name="text">
           <string>Current: 0.00</string>
          </property>
@@ -294,16 +317,22 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <layout class="QHBoxLayout" name="irbuttons">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="irapply">
          <property name="text">
           <string>Apply</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="ircalibrate">
          <property name="text">
           <string>Recalibrate</string>
          </property>
@@ -317,28 +346,28 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>390</y>
+      <y>320</y>
       <width>301</width>
-      <height>41</height>
+      <height>31</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_8">
+    <layout class="QHBoxLayout" name="otherbuttons">
      <item>
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="about">
        <property name="text">
         <string>About</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="pause">
        <property name="text">
         <string>Pause</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="resume">
        <property name="text">
         <string>Resume</string>
        </property>
@@ -346,16 +375,6 @@
      </item>
     </layout>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>320</width>
-     <height>22</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
