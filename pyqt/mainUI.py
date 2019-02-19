@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'openithm.ui',
 # licensing of 'openithm.ui' applies.
 #
-# Created: Mon Feb 18 13:43:30 2019
+# Created: Mon Feb 18 17:31:22 2019
 #      by: pyside2-uic  running on PySide2 5.12.1
 #
 # WARNING! All changes made in this file will be lost!

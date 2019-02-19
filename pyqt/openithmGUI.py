@@ -26,7 +26,7 @@ class OpeNITHM():
         self.s.baudrate = baudrate
         self.s.port = port
         self.s.timeout = timeout
-        print(self.s.name)
+        #print(self.s.name)
 
     def __enter__(self):
         self.openSerial()
@@ -80,7 +80,7 @@ class OpeNITHM():
         elif setting == 'alpha':
             payload = 'ta' + str(float(val))
         if payload != None:
-            print(payload)
+            #print(payload)
             self.serialWrite(payload.encode('ASCII'))
 
     def setIR(self, setting, val):
@@ -90,7 +90,7 @@ class OpeNITHM():
         elif setting == 'alpha':
             payload = 'ia' + str(float(val))
         if payload != None:
-            print(payload)
+            #print(payload)
             self.serialWrite(payload.encode('ASCII'))
 
     def calibrateTouchboard(self):
@@ -101,11 +101,11 @@ class OpeNITHM():
 
     def pause(self):
         self.serialWrite(b'p ')
-        print("Paused.")
+        #print("Paused.")
     
     def resume(self):
         self.serialWrite(b'r ')
-        print("Resumed.")
+        #print("Resumed.")
 
     def getState(self):
         if self.open_serial:
@@ -113,7 +113,7 @@ class OpeNITHM():
             result = ""
             while ';' not in result:
                 result += self.serialRead().decode("ASCII")
-            print(result)
+            #print(result)
             if int(result[0]):
                 return "Running"
             else:
@@ -125,12 +125,12 @@ class OpeNITHM():
         self.s.open()
         time.sleep(wait)
         self.open_serial = True
-        print("Opened serial connection.")
+        #print("Opened serial connection.")
 
     def closeSerial(self):
         self.s.close()
         self.open_serial = False
-        print("Closed serial connection.")
+        #print("Closed serial connection.")
         
 
 class MainWindow(QMainWindow):
